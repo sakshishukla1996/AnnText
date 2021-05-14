@@ -1,0 +1,23 @@
+<documentHeader xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:xlink="http://www.w3.org/1999/xlink" docId="MASC3-0060" date.created="2013-02-08">
+  <fileDesc>
+    <titleStmt>
+      <title>Twitter corpus</title>
+    </titleStmt>
+    <extent count="472" unit="tweets"/>
+    <sourceDesc>
+      <title>tweets1</title>
+      <source type="Web">unknown</source>
+      <pubDate value="2020"/>
+    </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+    <textClass catRef="WR TW">
+      <domain>Leisure</domain>
+      <subdomain>Social Media</subdomain>
+    </textClass>
+    <primaryData loc="tweets-emotions.txt" f.id="f.text"/>
+    <annotations>
+      <annotation loc="tweet-emotions.xml" f.id="f.em"/>
+    </annotations>
+  </profileDesc>
+</documentHeader>

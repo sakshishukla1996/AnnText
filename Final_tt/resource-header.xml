@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceHeader xmlns="http://www.xces.org/ns/GrAF/1.0/" xmlns:lnk="http://www.w3.org/1999/xlink"
+    version="1.0" creator="MS" year.created="2020" type="corpus">
+    <fileDesc>
+        <titleStmt>
+            <title>Twitter Reviews for Emotion Analysis</title>
+            <funder>Shainy Merin S</funder>
+            <respStmt>
+                <resp lnk:href="https://www.kaggle.com">unknown</resp>
+            </respStmt>
+        </titleStmt>
+        <editionStmt version="3.0.0"/>
+        <extent count="472" unit="tweets"/>
+        <publicationStmt>
+            <distributor>Shainy Merin S</distributor>
+            <pubAddress>Bengaluru, Karnataka, India</pubAddress>
+            <pubYear value="2020"/>
+            <availability lnk:href="https://www.kaggle.com/shainy/twitter-reviews-for-emotion-analysis/activity" status="free"/>
+        </publicationStmt>
+    </fileDesc>
+    <encodingDesc>
+        <projectDesc>This project aims to process metadata encoding by using SQL to extract text from 
+	database storing the corpus, adding linguistic annotations to the text, describing the provenance
+	 of the results using LAF and GrAF Standards and finally extracting the tagsets using SQL.
+        </projectDesc>
+        <samplingDecl> The original dataset includes around 10000 tweets, written in different languages. 
+	For the purpose of our project, we left tweets in English, Hindi, Russian, since we speak the languages.
+        </samplingDecl>
+        <classDecl>
+            <taxonomy xml:id="TT">
+                <category xml:id="WR">
+                    <category xml:id="TW">
+                        <catDesc>tweets</catDesc>
+                    </category>
+                </category>
+            </taxonomy>
+        </classDecl>
+    </encodingDesc>
+    <resourceDesc>
+        <fileStruct>
+            <directories>
+                <directory xml:id="data" d.name="data" root="yes">
+                    <directory xml:id="written" d.name="written"
+                        f.ids="f.primary
+                        f.s"/>
+                </directory>
+            </directories>
+            <fileTypes>
+                <fileType xml:id="f.primary" medium="text"/>
+                <fileType xml:id="f.em" f.suffix="em" a.ids="a.em" medium="xml">
+                    <requires f.id="f.primary"/>
+                </fileType>
+            </fileTypes>
+        </fileStruct>
+        <annotationSpaces>
+            <annotationSpace xml:id="emotions"/>
+        </annotationSpaces>
+        <annotationDecls>
+            <annotationDecl xml:id="a.happy" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+            <annotationDecl xml:id="a.sad" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+             <annotationDecl xml:id="a.surprise" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+            <annotationDecl xml:id="a.anger" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+            <annotationDecl xml:id="a.fear" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+            <annotationDecl xml:id="a.disgust" as.id="tweets">
+                <a.desc>sentence boundaries</a.desc>
+                <a.method type=""/>
+                <a.doc lnk:href=""/>
+            </annotationDecl>
+        </annotationDecls>
+
+        <media>
+            <medium xml:id="text" type="text/plain" encoding="utf-8" extension="txt"/>
+            <medium xml:id="xml" type="text/xml" encoding="utf-8" extension="xml"/>
+        </media>
+        <anchorTypes>
+            <anchorType xml:id="anchor.char" medium="text" default="true"
+                lnk:href="http://www.xces.org/ns/GrAF/1.0/#character-anchor"/>
+        </anchorTypes>
+        <groups>
+            <group xml:id="g.annotation-layer">
+                <g.desc>Annotation of tweets based on Ekman's six emotions.</g.desc>
+                <g.member value="a.happy" type="type"/>
+                <g.member value="a.sad" type="type"/>
+                <g.member value="a.surprise" type="type"/>
+	<g.member value="a.anger" type="type"/>
+	<g.member value="a.fear" type="type"/>
+	<g.member value="a.disgust" type="type"/>
+            </group>
+        </groups>
+    </resourceDesc>
+</resourceHeader>
