@@ -1,2 +1,2 @@
 # AnnText
-Providing Annotation to Emotional Tweets using LAF/GrAF through XML scripts.
+AnnText is an annotation to Emotion-based Tweets from TweetEval using LAF/GrAF methodologies through XML scripts.
